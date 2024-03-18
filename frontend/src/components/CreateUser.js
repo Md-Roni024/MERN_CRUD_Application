@@ -11,10 +11,7 @@ function CreateUser() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log("Hello Ope.")
       const response = await axios.post("http://localhost:3001/createUser/", { name, email, age });
-      // console.log(response)
-      console.log(response.data); // Log response data if needed
       navigate('/')
     } catch (error) {
       console.log(error);
